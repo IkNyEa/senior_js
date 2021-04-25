@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //该方法关键是把方法都放入原型对象中
+        function creatOBJ(name, age) {
+            this.name = name;
+            this.age = age;
+
+        }
+        creatOBJ.prototype.setName = function(name) {
+            this.name = name;
+        }
+
+        var p1 = new creatOBJ('jx', 21);
+        console.log(p1, p1.name);
+        //调用原型对象方法修改name属性
+        p1.setName('wsl');
+        console.log(p1, p1.name);
+    </script>
+</body>
+
+</html>

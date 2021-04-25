@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun1() {
+
+        }
+        fun1.a = 'xxx';
+        console.log(fun1.a);
+        console.log(new fun1());
+        ///下面是测试闭包（大概吧
+        function fun2() {
+            var n = 100;
+            this.setter = function() {
+                return ++n;
+            }
+            this.getter = function() {
+                return n;
+            }
+        }
+        console.log(fun2.n);
+        var close = new fun2();
+        console.log(close.setter());
+        console.log(close.getter());
+    </script>
+</body>
+
+</html>

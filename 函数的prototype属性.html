@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(Date.prototype, typeof Date.prototype)
+
+        function Fun() {
+
+        }
+
+        function fun1() {
+
+        }
+        console.log(fun1.prototype);
+        Fun.prototype.test = function() {
+            console.log('test');
+        }
+        console.log(Fun.prototype);
+
+        console.log(Date.prototype.constructor === Date)
+        console.log(Fun.prototype.constructor === Fun)
+
+        var fun = new Fun();
+        console.log(typeof fun);
+        fun.test();
+    </script>
+</body>
+
+</html>

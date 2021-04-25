@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        var test = 3;
+
+        function fun(obj) {
+            obj++;
+        }
+        fun(test);
+        if (test == 3) {
+            console.log("局部函数传全局参无法改变全局变量的值，说明传参数传的是值");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

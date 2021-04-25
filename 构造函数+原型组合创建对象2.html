@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var t1 = new Date();
+        var start = t1.getUTCMilliseconds();
+        console.log(start)
+
+        function creatOBJ2(name, age) {
+            this.name = name;
+            this.age = age;
+
+        }
+        creatOBJ2.prototype.set = function(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        function fun() {}
+        var creatp = new creatOBJ2('jx', 20);
+
+        console.log(creatp.name, creatp.age);
+        creatp.set('shakou', 9);
+        console.log(creatp.name, creatp.age);
+
+        var end = new Date().getUTCMilliseconds();
+        console.log(end);
+        console.log('使用时间：' + (end - start));
+        console
+    </script>
+</body>
+
+</html>

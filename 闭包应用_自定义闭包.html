@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //向外部暴露对象方式1:
+        /*function myModule() {
+            var msg = 'this is private:msg';
+
+            function doBig() {
+                console.log('doBig' + msg.toUpperCase());
+            }
+
+            function doSmall() {
+                console.log('doSmall' + msg.toLowerCase());
+            }
+            return {
+                doBig: doBig,
+                doSmall: doSmall
+            }
+        }
+        var module = myModule();
+        module.doBig();
+        module.doSmall();
+        */
+        //向外部暴露对象方式2
+        (function() {
+            var msg = 'this is private:msg';
+
+            function doBig() {
+                console.log('doBig' + msg.toUpperCase());
+            }
+
+            function doSmall() {
+                console.log('doSmall' + msg.toLowerCase());
+            }
+            window.doBig = doBig;
+            window.doSmall = doSmall;
+        })()
+
+        doBig();
+        doSmall();
+    </script>
+</body>
+
+</html>

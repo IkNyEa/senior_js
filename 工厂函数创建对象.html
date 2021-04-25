@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //factory 函数创建对象
+
+        function creatPerson(name, age) {
+
+            var obj = {
+                name: name,
+                age: age,
+                setName: function(name) {
+                    this.name = name;
+                }
+            }
+            return obj;
+        }
+        var p1 = creatPerson('jx', 21);
+        console.log(p1.name);
+        p1.setName('wml');
+        console.log(p1.name);
+    </script>
+</body>
+
+</html>
