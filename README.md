@@ -1,2 +1,2 @@
 # senior_js
-用于记录高级JavaScript的学习笔记
+用于学习JavaScript高级知识的学习笔记
